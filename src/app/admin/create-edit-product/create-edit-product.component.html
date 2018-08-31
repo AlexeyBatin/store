@@ -1,0 +1,28 @@
+<mat-toolbar class="section-header">
+  <a mat-icon-button routerLink="/admin/products">
+    <mat-icon aria-label="icon-button">arrow_back</mat-icon>
+  </a><span>Назад</span>
+</mat-toolbar>
+<form novalidate [formGroup]="productForm" (ngSubmit)="onSubmit(productForm)">
+  <div class="container">
+    <mat-form-field>
+      <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput rows="6" placeholder="Description" formControlName="description"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Price" type="number" class="right-align" formControlName="price" min="0">
+      <span matPrefix>$&nbsp;</span>
+      <span matSuffix>.00</span>
+    </mat-form-field>
+    <div class="checkbox">
+      <mat-checkbox formControlName="avaible">Avaible in stock</mat-checkbox>
+    </div>
+    <mat-form-field>
+      <input matInput placeholder="imagePath" formControlName="image">
+    </mat-form-field>
+    <button mat-flat-button color="primary" type="submit" [disabled]='!productForm.valid'>Сохранить</button>
+  </div>
+
+</form>

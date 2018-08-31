@@ -1,0 +1,65 @@
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 26px;
+}
+
+.right-side {
+  margin-left: auto;
+}
+
+.img-mini {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+table {
+  width: 100%;
+}
+
+.id {
+  width: 50px;
+}
+
+.name {
+  width: 200px;
+}
+
+.price {
+  width: 120px;
+}
+
+.avaible {
+  width: 80px;
+}
+
+.image {
+  width: 120px;
+  text-align: center;
+}
+
+.description {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 26px;
+}
+
+.filter-form {
+  width: 320px;
+  max-width: 320px;
+}
+
+.product-row {
+  cursor: pointer;
+}
+
+.product-row:hover {
+  background: #f2f2f2;
+}
