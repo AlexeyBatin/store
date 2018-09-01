@@ -3,14 +3,14 @@ export class Product {
   name: string;
   description: string;
   price: number;
-  avaible: boolean;
+  available: boolean;
   image: string;
-  constructor(id , name , description, price , avaible, image) {
+  constructor(id , name , description, price , available, image) {
     this.id = id;
     this.name = name;
     this.description = description;
     this.price = price;
-    this.avaible = avaible;
+    this.available = available;
     this.image = image;
   }
 }

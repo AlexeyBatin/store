@@ -7,7 +7,9 @@ import { MaterialModule } from '../material.module';
 import { HomeComponent } from './home/home.component';
 import { CreateEditProductComponent } from './create-edit-product/create-edit-product.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AvaiblePipe } from './products/avaible.pipe';
+import { AvailablePipe } from './products/available.pipe';
+import { OrdersComponent } from './orders/orders.component';
+
 
 @NgModule({
   imports: [
@@ -16,6 +18,6 @@ import { AvaiblePipe } from './products/avaible.pipe';
     MaterialModule,
     ReactiveFormsModule
   ],
-  declarations: [ProductsComponent, HomeComponent, CreateEditProductComponent, AvaiblePipe]
+  declarations: [ProductsComponent, HomeComponent, CreateEditProductComponent, AvailablePipe, OrdersComponent]
 })
 export class AdminModule { }

@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CatalogComponent } from './catalog/catalog.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
-  { path: 'admin', redirectTo: 'admin'},
+  {
+    path: 'admin', redirectTo: 'admin'
+  },
   {
     path: '',
     pathMatch: 'full',
@@ -12,6 +15,10 @@ const routes: Routes = [
   {
     path: 'catalog',
     component: CatalogComponent
+  },
+  {
+    path: 'cart',
+    component: CartComponent
   }
 ];
 

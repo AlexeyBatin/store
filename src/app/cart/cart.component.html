@@ -1,0 +1,43 @@
+<mat-toolbar class="section-header">
+  <a mat-icon-button routerLink="/">
+    <mat-icon aria-label="icon-button">arrow_back</mat-icon>
+  </a><span>Back</span>
+</mat-toolbar>
+<div class="cart">
+  <form novalidate [formGroup]="orderForm" (ngSubmit)="onSubmit(orderForm)">
+    <div class="container">
+      <h2 class="form-header mb-0">Personal Information</h2>
+      <mat-form-field>
+        <input matInput placeholder="Your Full Name " formControlName="fullName">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Phone Number" formControlName="phoneNumber">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Address" formControlName="address">
+      </mat-form-field>
+      <button mat-flat-button color="primary" type="submit" [disabled]='!orderForm.valid || emptyCart'>Confirm</button>
+    </div>
+  </form>
+
+  <div class="cart-info">
+    <mat-list class="cart-items mat-elevation-z8">
+      <h2 class="mat-headline mb-0" *ngIf="emptyCart">Your cart is empty.</h2>
+      <div *ngIf="!emptyCart">
+        <p>
+          <span [matBadge]="badge" matBadgeOverlap="false" class="mat-title">Your cart</span>
+        </p>
+        <mat-divider></mat-divider>
+
+        <mat-list-item *ngFor="let product of cart | keyvalue" class="cart-list-item">
+          <mat-icon mat-list-icon color="warn" aria-label="Delete" class="delete-icon" (click)="deleteItem(product.key)">cancel</mat-icon>
+          <img [src]="product.value.image" alt="Hello" class="small-img">
+          <h4 mat-line>{{product.value.name}}</h4>
+          <p mat-line>{{product.value.price | currency}}</p>
+        </mat-list-item>
+        <mat-divider class="mt-20"></mat-divider>
+        <p class="mat-subheading-2 totalprice">Total price : {{totalPrice | currency}}</p>
+      </div>
+    </mat-list>
+  </div>
+</div>

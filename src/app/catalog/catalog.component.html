@@ -1,3 +1,32 @@
-<p>
-  catalog works!
-</p>
+<mat-toolbar>
+  <span>Catalog Internet Store</span>
+  <span class="spacer"></span>
+  <a mat-icon-button color="primary" routerLink="/cart">
+    <mat-icon aria-label="Example icon-button with a heart icon">shopping_cart</mat-icon>
+  </a>
+</mat-toolbar>
+
+<div class="card-grid">
+  <div *ngFor="let product of products" class="card-wrapper">
+    <mat-card class="card">
+      <mat-card-header class="center">
+        <mat-card-title>
+          <h2>{{product.name}}</h2>
+        </mat-card-title>
+      </mat-card-header>
+      <div class="card-img">
+        <img mat-card-image [src]="product.image" alt="{{product.name}} Photo">
+      </div>
+      <mat-card-content>
+        <p>
+          {{product.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions class="mt-auto">
+        <button mat-button (click)="buyProduct(product)" [disabled]='!product.available'>Buy</button>
+        <button mat-button (click)="addToCart(product)" [disabled]='!product.available'>
+          {{product.available ? 'Add to cart' : 'Not available'}}</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

@@ -10,12 +10,15 @@ import { InMemoryDataService } from './services/in-memory-data.service';
 import { AdminModule } from './admin/admin.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CatalogComponent } from './catalog/catalog.component';
+import { CartComponent } from './cart/cart.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CatalogComponent
+    CatalogComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,7 @@ import { CatalogComponent } from './catalog/catalog.component';
     MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )

@@ -21,7 +21,7 @@ export class ProductService {
   getProducts(): Observable<Product[]> {
     return this._http.get<Product[]>(this.productsUrl)
       .pipe(
-        tap(heroes => console.log('fetched products', heroes)),
+        tap(products => console.log('fetched products', products)),
         catchError(this.handleError('getProducts', []))
       );
   }
@@ -41,7 +41,7 @@ export class ProductService {
   addProduct(product: Product): Observable<Product> {
     return this._http.post<Product>(this.productsUrl, product, httpOptions).pipe(
       tap((prod: Product) => console.log(`added product w/ id=${prod.id}`)),
-      catchError(this.handleError<Product>('addHero'))
+      catchError(this.handleError<Product>('addProduct'))
     );
   }
 
@@ -52,15 +52,15 @@ export class ProductService {
 
     return this._http.delete<Product>(url, httpOptions).pipe(
       tap(_ => console.log(`deleted product id=${id}`)),
-      catchError(this.handleError<Product>('deleteHero'))
+      catchError(this.handleError<Product>('deleteProduct'))
     );
   }
 
   /** PUT: update the product on the server */
   updateProduct(product: Product): Observable<any> {
     return this._http.put(this.productsUrl, product, httpOptions).pipe(
-      tap(_ => console.log(`updated hero id=${product.id}`)),
-      catchError(this.handleError<any>('updateHero'))
+      tap(_ => console.log(`updated product id=${product.id}`)),
+      catchError(this.handleError<any>('updateProduct'))
     );
   }
 

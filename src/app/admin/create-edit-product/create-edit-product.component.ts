@@ -25,7 +25,7 @@ export class CreateEditProductComponent implements OnInit {
     this.currentProduct.name = productForm.value.name;
     this.currentProduct.description = productForm.value.description;
     this.currentProduct.price = productForm.value.price;
-    this.currentProduct.avaible = productForm.value.avaible;
+    this.currentProduct.available = productForm.value.available;
     this.currentProduct.image = productForm.value.image;
     if (this.currentProduct.id) {
       this._productService.updateProduct(this.currentProduct)
@@ -57,9 +57,9 @@ export class CreateEditProductComponent implements OnInit {
   private buildForm() {
     this.productForm = this._fb.group({
       name: ['', Validators.required],
-      description: ['', Validators.required],
+      description: ['', [Validators.required, Validators.maxLength(200)]],
       price: ['', Validators.required],
-      avaible: [''],
+      available: [''],
       image: ['']
     });
   }

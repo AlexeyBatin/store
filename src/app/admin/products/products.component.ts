@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'description', 'price', 'avaible', 'image', 'action'];
+  displayedColumns: string[] = ['id', 'name', 'description', 'price', 'available', 'image', 'action'];
   dataSource;
   @ViewChild(MatSort) sort: MatSort;
   constructor(private _productService: ProductService, private _router: Router) {

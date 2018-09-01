@@ -1,0 +1,35 @@
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 26px;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+table {
+  width: 100%;
+}
+
+.container {
+  height: calc(100vh - 248px);
+  overflow: auto;
+}
+
+.filter-form {
+  width: 320px;
+  max-width: 320px;
+}
+
+.order-row {
+  cursor: pointer;
+}
+
+.order-row:hover {
+  background: #f2f2f2;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
