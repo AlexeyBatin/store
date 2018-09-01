@@ -51,9 +51,11 @@ export class CartComponent implements OnInit {
   }
 
   private buildForm() {
+    const phoneRegExp = /^(\+38\s+)?\d{3}(\s*|\-)\d{3}(\s*|\-)\d{4}$/;
+    const fullNameRegExp = /^([A-Z]+[a-zA-Z]*)(\s|\-)?([A-Z]+[a-zA-Z]*)?(\s|\-)?([A-Z]+[a-zA-Z]*)?$/;
     this.orderForm = this._fb.group({
-      fullName: ['', Validators.required],
-      phoneNumber: ['', Validators.required],
+      fullName: ['', [Validators.required, Validators.pattern(fullNameRegExp)]],
+      phoneNumber: ['', [Validators.required, Validators.pattern(phoneRegExp)]],
       address: ['', Validators.required]
     });
   }
@@ -69,12 +71,12 @@ export class CartComponent implements OnInit {
     this.order.address = orderForm.value.address;
     this.order.products = this.getProductsFromCart(this.cart);
     this.order.totalPrice = this.getTotalPrice(this.order.products);
-      this._orderService.addOrder(this.order)
-        .subscribe(_ => {
-          this._router.navigate(['catalog']);
-          this._cartService.clearCart();
-        },
-          err => console.error(err));
+    this._orderService.addOrder(this.order)
+      .subscribe(_ => {
+        this._router.navigate(['catalog']);
+        this._cartService.clearCart();
+      },
+        err => console.error(err));
   }
 
   private getTotalPrice(products: Product[]) {

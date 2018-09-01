@@ -31,68 +31,14 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
 
     const orders = [{
-      id: 1, fullName: 'Test Testing', phoneNumber: '+380999999', address: 'Test St.', products: [{
+      id: 1, fullName: 'Admin Admin', phoneNumber: '0959999999', address: 'Test St.', products: [{
         // tslint:disable-next-line:max-line-length
         id: 4, name: 'Xiaomi Redmi Note 5', description: `Xiaomi Redmi Note 5 – смартфон для тех, кто хочет получить максимально сбалансированный девайс, имеющий хороший экран, производительность, достаточно высокое качество и, при этом, доступную стоимость.`,
         price: 150, available: true, image: '../../assets/img/Xiaomi-Redmi-Note-5A-Pro-grey-2.png'
       }], totalPrice: 150
     },
     {
-      id: 2, fullName: 'Test Testing', phoneNumber: '+380999999', address: 'Test St.', products: [{
-        // tslint:disable-next-line:max-line-length
-        id: 4, name: 'Xiaomi Redmi Note 5', description: `Xiaomi Redmi Note 5 – смартфон для тех, кто хочет получить максимально сбалансированный девайс, имеющий хороший экран, производительность, достаточно высокое качество и, при этом, доступную стоимость.`,
-        price: 120, available: true, image: '../../assets/img/Xiaomi-Redmi-Note-5A-Pro-grey-2.png'
-      }], totalPrice: 120
-    },
-    {
-      id: 2, fullName: 'Test Testing', phoneNumber: '+380999999', address: 'Test St.', products: [{
-        // tslint:disable-next-line:max-line-length
-        id: 4, name: 'Xiaomi Redmi Note 5', description: `Xiaomi Redmi Note 5 – смартфон для тех, кто хочет получить максимально сбалансированный девайс, имеющий хороший экран, производительность, достаточно высокое качество и, при этом, доступную стоимость.`,
-        price: 120, available: true, image: '../../assets/img/Xiaomi-Redmi-Note-5A-Pro-grey-2.png'
-      }], totalPrice: 120
-    },
-    {
-      id: 2, fullName: 'Test Testing', phoneNumber: '+380999999', address: 'Test St.', products: [{
-        // tslint:disable-next-line:max-line-length
-        id: 4, name: 'Xiaomi Redmi Note 5', description: `Xiaomi Redmi Note 5 – смартфон для тех, кто хочет получить максимально сбалансированный девайс, имеющий хороший экран, производительность, достаточно высокое качество и, при этом, доступную стоимость.`,
-        price: 120, available: true, image: '../../assets/img/Xiaomi-Redmi-Note-5A-Pro-grey-2.png'
-      }], totalPrice: 120
-    }, {
-      id: 2, fullName: 'Test Testing', phoneNumber: '+380999999', address: 'Test St.', products: [{
-        // tslint:disable-next-line:max-line-length
-        id: 4, name: 'Xiaomi Redmi Note 5', description: `Xiaomi Redmi Note 5 – смартфон для тех, кто хочет получить максимально сбалансированный девайс, имеющий хороший экран, производительность, достаточно высокое качество и, при этом, доступную стоимость.`,
-        price: 120, available: true, image: '../../assets/img/Xiaomi-Redmi-Note-5A-Pro-grey-2.png'
-      }], totalPrice: 120
-    }, {
-      id: 2, fullName: 'Test Testing', phoneNumber: '+380999999', address: 'Test St.', products: [{
-        // tslint:disable-next-line:max-line-length
-        id: 4, name: 'Xiaomi Redmi Note 5', description: `Xiaomi Redmi Note 5 – смартфон для тех, кто хочет получить максимально сбалансированный девайс, имеющий хороший экран, производительность, достаточно высокое качество и, при этом, доступную стоимость.`,
-        price: 120, available: true, image: '../../assets/img/Xiaomi-Redmi-Note-5A-Pro-grey-2.png'
-      }], totalPrice: 120
-    },
-    {
-      id: 2, fullName: 'Test Testing', phoneNumber: '+380999999', address: 'Test St.', products: [{
-        // tslint:disable-next-line:max-line-length
-        id: 4, name: 'Xiaomi Redmi Note 5', description: `Xiaomi Redmi Note 5 – смартфон для тех, кто хочет получить максимально сбалансированный девайс, имеющий хороший экран, производительность, достаточно высокое качество и, при этом, доступную стоимость.`,
-        price: 120, available: true, image: '../../assets/img/Xiaomi-Redmi-Note-5A-Pro-grey-2.png'
-      }], totalPrice: 120
-    },
-    {
-      id: 2, fullName: 'Test Testing', phoneNumber: '+380999999', address: 'Test St.', products: [{
-        // tslint:disable-next-line:max-line-length
-        id: 4, name: 'Xiaomi Redmi Note 5', description: `Xiaomi Redmi Note 5 – смартфон для тех, кто хочет получить максимально сбалансированный девайс, имеющий хороший экран, производительность, достаточно высокое качество и, при этом, доступную стоимость.`,
-        price: 120, available: true, image: '../../assets/img/Xiaomi-Redmi-Note-5A-Pro-grey-2.png'
-      }], totalPrice: 120
-    },
-    {
-      id: 2, fullName: 'Test Testing', phoneNumber: '+380999999', address: 'Test St.', products: [{
-        // tslint:disable-next-line:max-line-length
-        id: 4, name: 'Xiaomi Redmi Note 5', description: `Xiaomi Redmi Note 5 – смартфон для тех, кто хочет получить максимально сбалансированный девайс, имеющий хороший экран, производительность, достаточно высокое качество и, при этом, доступную стоимость.`,
-        price: 120, available: true, image: '../../assets/img/Xiaomi-Redmi-Note-5A-Pro-grey-2.png'
-      }], totalPrice: 120
-    },
-    {
-      id: 2, fullName: 'Test Testing', phoneNumber: '+380999999', address: 'Test St.', products: [{
+      id: 2, fullName: 'Test Testing', phoneNumber: '0959999999', address: 'Test St.', products: [{
         // tslint:disable-next-line:max-line-length
         id: 4, name: 'Xiaomi Redmi Note 5', description: `Xiaomi Redmi Note 5 – смартфон для тех, кто хочет получить максимально сбалансированный девайс, имеющий хороший экран, производительность, достаточно высокое качество и, при этом, доступную стоимость.`,
         price: 120, available: true, image: '../../assets/img/Xiaomi-Redmi-Note-5A-Pro-grey-2.png'

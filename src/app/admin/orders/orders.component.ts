@@ -1,18 +1,26 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../../services/order.service';
-import { MatTableDataSource, MatSort } from '@angular/material';
+import { MatTableDataSource} from '@angular/material';
 import { Order } from '../../model/order';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.css']
+  styleUrls: ['./orders.component.css'],
+  animations: [
+    trigger('detailExpand', [
+      state('collapsed', style({height: '0px', minHeight: '0', display: 'none'})),
+      state('expanded', style({height: '*'})),
+      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+    ]),
+  ]
 })
 export class OrdersComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'fullName', 'phoneNumber', 'address', 'totalPrice'];
+  columnsToDisplay: string[] = ['id', 'fullName', 'phoneNumber', 'address', 'totalPrice'];
   dataSource;
+  expandedElement: Order;
   summary: number;
-  @ViewChild(MatSort) sort: MatSort;
 
   constructor(private _orderService: OrderService) { }
 
@@ -29,7 +37,6 @@ export class OrdersComponent implements OnInit {
     this._orderService.getOrders().subscribe(
       orders => {
         this.dataSource = new MatTableDataSource(orders);
-        this.dataSource.sort = this.sort;
         this.summary = this.getTotalCost();
       },
       err => console.error(err)

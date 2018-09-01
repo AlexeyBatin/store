@@ -9,12 +9,15 @@
       <h2 class="form-header mb-0">Personal Information</h2>
       <mat-form-field>
         <input matInput placeholder="Your Full Name " formControlName="fullName">
+        <mat-hint align="end">Example: Igor Sikorsky </mat-hint>
       </mat-form-field>
       <mat-form-field>
         <input matInput placeholder="Phone Number" formControlName="phoneNumber">
+        <mat-hint align="end">Example : +38 095-999-9999 | 0959999999 </mat-hint>
       </mat-form-field>
       <mat-form-field>
         <input matInput placeholder="Address" formControlName="address">
+        <mat-hint align="end">Example: Politekhnichna St, Kyiv</mat-hint>
       </mat-form-field>
       <button mat-flat-button color="primary" type="submit" [disabled]='!orderForm.valid || emptyCart'>Confirm</button>
     </div>
