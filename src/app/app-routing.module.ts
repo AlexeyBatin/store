@@ -5,7 +5,8 @@ import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {
-    path: 'admin', redirectTo: 'admin'
+    path: 'admin',
+    redirectTo: 'admin'
   },
   {
     path: '',

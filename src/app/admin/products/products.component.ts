@@ -27,6 +27,7 @@ export class ProductsComponent implements OnInit {
         this.dataSource.sort = this.sort;
       });
   }
+
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }

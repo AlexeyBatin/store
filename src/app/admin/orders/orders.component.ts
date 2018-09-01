@@ -42,6 +42,7 @@ export class OrdersComponent implements OnInit {
       err => console.error(err)
     );
   }
+
   private getTotalCost() {
     return this.dataSource.filteredData.reduce((sum, order: Order) => sum + order.totalPrice, 0);
   }
